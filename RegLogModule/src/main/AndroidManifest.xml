@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.suitapps.reglog">
+
+    <!-- Required get a profile picture from the camera -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Required for Parse.com implementation (optional) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <activity android:name=".LoginActivity" android:screenOrientation="portrait" android:theme="@style/ModuleTheme"></activity>
+        <activity android:name=".RegistrationActivity" android:screenOrientation="portrait" android:theme="@style/ModuleTheme"></activity>
+    </application>
+</manifest>

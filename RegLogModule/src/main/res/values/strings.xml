@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">RegLog</string>
+
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_registration">Sign in</string>
+
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_confirmation">Password confirmation</string>
+    <string name="prompt_profile_picture">Add Profile picture</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_invalid_password_match">Passwords doesn\'t match</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_invalid_username">Username empty or too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="no_account">Don\'t have an account yet?</string>
+    <string name="password_confirm">Confirm Password</string>
+    <string name="registration_completed">Signed Up successfully</string>
+    <string name="pick_image_intent_text">Pick an image</string>
+
+</resources>
