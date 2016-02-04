@@ -17,6 +17,12 @@ android {
         }
     }
     sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/layout'] } }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
 }
 
 dependencies {
@@ -29,4 +35,7 @@ dependencies {
     // ( No need to add parse.com if you are using a different backend )
     provided 'com.parse:parse-android:1.12.0'
     provided 'com.parse.bolts:bolts-android:1.4.0'
+
+    //Needed using firebase as a backend
+    provided 'com.firebase:firebase-client-android:2.5.0+'
 }
