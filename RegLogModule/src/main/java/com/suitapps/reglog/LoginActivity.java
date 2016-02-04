@@ -23,6 +23,8 @@ import com.suitapps.reglog.events.LoginCallbackEvent;
 import com.suitapps.reglog.services.LoginService;
 
 import de.greenrobot.event.EventBus;
+
+import com.suitapps.reglog.servicesimpl.LoginServiceFirebaseImpl;
 import com.suitapps.reglog.servicesimpl.LoginServiceParseImpl;
 
 public class LoginActivity extends RegLogBaseActivity {
@@ -75,7 +77,7 @@ public class LoginActivity extends RegLogBaseActivity {
         mProgressView = findViewById(R.id.login_progress);
 
         //Example with Parse.com backed
-        mLoginService = new LoginServiceParseImpl();
+        mLoginService = new LoginServiceFirebaseImpl();
     }
 
     /**

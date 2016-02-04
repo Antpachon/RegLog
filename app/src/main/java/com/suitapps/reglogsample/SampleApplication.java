@@ -1,7 +1,9 @@
 package com.suitapps.reglogsample;
 
 import android.app.Application;
+import android.content.Context;
 
+import com.firebase.client.Firebase;
 import com.parse.Parse;
 
 /**
@@ -13,8 +15,14 @@ public class SampleApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        //If using Parse.com
         Parse.enableLocalDatastore(this);
         //TODO Customize parse_app_id & parse_client_key values in strings
         Parse.initialize(this);
+
+        //If Using Firebase.
+        Firebase.setAndroidContext(this);
     }
+
+
 }
