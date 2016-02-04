@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.suitapps.reglog.events.RegisterCallbackEvent;
+import com.suitapps.reglog.servicesimpl.RegisterServiceFirebaseImpl;
 import com.suitapps.reglog.servicesimpl.RegisterServiceParseImpl;
 import com.suitapps.reglog.utils.ImagePicker;
 
@@ -136,7 +137,7 @@ public class RegistrationActivity extends RegLogBaseActivity {
                 // Show a progress spinner, and kick off a background task to
                 // perform the user login attempt.
                 showProgress(true);
-                new RegisterServiceParseImpl().register(email,username,password,mProfilePicutreBitmap);
+                new RegisterServiceFirebaseImpl().register(email,username,password,mProfilePicutreBitmap);
             }
         }
 
