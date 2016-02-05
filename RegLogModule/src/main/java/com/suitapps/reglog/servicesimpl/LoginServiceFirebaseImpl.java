@@ -6,6 +6,7 @@ import com.firebase.client.FirebaseError;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.suitapps.reglog.RegLog;
 import com.suitapps.reglog.events.LoginCallbackEvent;
 import com.suitapps.reglog.services.LoginService;
 
@@ -21,7 +22,7 @@ public class LoginServiceFirebaseImpl implements LoginService {
     @Override
     public void login(String username, String password) {
 
-        final Firebase myFirebaseRef = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com/");
+        final Firebase myFirebaseRef = RegLog.getFirebase();
 
         myFirebaseRef.authWithPassword(username, password, new Firebase.AuthResultHandler() {
             @Override
