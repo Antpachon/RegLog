@@ -10,6 +10,7 @@ import com.parse.ParseFile;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
+import com.suitapps.reglog.RegLog;
 import com.suitapps.reglog.events.LoginCallbackEvent;
 import com.suitapps.reglog.events.RegisterCallbackEvent;
 import com.suitapps.reglog.services.RegisterService;
@@ -28,7 +29,7 @@ public class RegisterServiceFirebaseImpl implements RegisterService {
     @Override
     public void register(String email, final String username, String password, final Bitmap profilePicture) {
 
-        final Firebase myFirebaseRef = new Firebase("https://<YOUR-FIREBASE-APP>.firebaseio.com/");
+        final Firebase myFirebaseRef = RegLog.getFirebase();
 
         myFirebaseRef.createUser(email, password, new Firebase.ValueResultHandler<Map<String, Object>>() {
             @Override
